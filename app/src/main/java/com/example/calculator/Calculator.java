@@ -2,9 +2,11 @@ package com.example.calculator;
 
 public class Calculator {
     private double OperandOne ,OperandTwo;
-    private char Operation;
+    private String Operation;
+    public Calculator(){
 
-    public Calculator(double operandOne, double operandTwo, char operation) {
+    }
+    public Calculator(double operandOne, double operandTwo, String operation) {
         OperandOne = operandOne;
         OperandTwo = operandTwo;
         Operation = operation;
@@ -26,20 +28,20 @@ public class Calculator {
         OperandTwo = operandTwo;
     }
 
-    public char getOperation() {
+    public String getOperation() {
         return Operation;
     }
 
-    public void setOperation(char operation) {
+    public void setOperation(String operation) {
         Operation = operation;
     }
 
     public double performOperation() {
 
-        if(this.getOperation() == '+') {
+        if(this.getOperation() == "+") {
             return this.getOperandOne() + this.OperandTwo;
         }
-        else if(this.getOperation() == '-') {
+        else if(this.getOperation() == "-") {
             return this.getOperandOne() - this.OperandTwo;
         }
         else {
@@ -49,7 +51,7 @@ public class Calculator {
 
 
     public String getResults() {
-        return String.format(String.valueOf(this.OperandOne), this.OperandTwo ,this.performOperation());
+        return String.valueOf(this.OperandOne)+ this.OperandTwo +this.performOperation();
 
     }
 
