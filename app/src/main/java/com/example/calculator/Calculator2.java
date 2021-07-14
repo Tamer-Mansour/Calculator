@@ -20,7 +20,7 @@ public class Calculator2 {
             int i = 0;
             while (this.mathSign.contains("*") || this.mathSign.contains("/")) {
                 if (this.mathSign.get(i) == "*") {
-                    first_result = this.number.get(i) * this.number.get(i + 1);
+                    first_result = this.number.get(i) * this.number.get(i+1);
 
                     this.number.set(i, first_result);
                     this.number.remove(i + 1);
@@ -28,7 +28,7 @@ public class Calculator2 {
 
                     i = i - 1;
                 } else if (this.mathSign.get(i) == "/") {
-                    first_result = this.number.get(i) / this.number.get(i + 1);
+                    first_result = this.number.get(i) / this.number.get(i+1);
                     this.number.set(i, first_result);
                     this.number.remove(i + 1);
                     this.mathSign.remove(i);

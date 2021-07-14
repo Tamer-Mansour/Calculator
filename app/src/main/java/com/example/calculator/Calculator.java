@@ -20,9 +20,6 @@ public class Calculator {
         OperandOne =operandOne;
     }
 
-    public double getOperandTwo() {
-        return OperandTwo;
-    }
 
     public void setOperandTwo(double operandTwo) {
         OperandTwo = operandTwo;
@@ -48,7 +45,6 @@ public class Calculator {
             return 0;
         }
     }
-
 
     public String getResults() {
         return String.valueOf(this.OperandOne)+ this.OperandTwo +this.performOperation();
